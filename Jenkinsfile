@@ -15,9 +15,7 @@ pipeline{
 		}
 		stage ("deploy"){
 			steps {
-		sh label: '', script: '''ID=`docker ps | awk \'NS>1{print $1}\'`
-		echo $ID
-		"docker cp ./index.html $ID:/app/index.php"'''
+		sh label: '', script: 'docker cp ./index.html 89f7ab412f3f:/app/index.php'
 		        }
 		}
 	}
