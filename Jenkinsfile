@@ -8,4 +8,9 @@ pipeline{
 			}
 		}
 	}
+	post{
+	  success{
+		archiveArtifacts 'index.html'
+	  }
+	}
 }
