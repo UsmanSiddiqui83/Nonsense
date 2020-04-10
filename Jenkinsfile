@@ -16,7 +16,8 @@ pipeline{
 		stage ("deploy"){
 			steps {
 		sh label: '', script: '''ID=`docker ps | awk \'NS>1{print $1}\'`
-		docker cp ./index.html $ID:/app/index.php'''
+		echo $ID
+		"docker cp ./index.html $ID:/app/index.php"'''
 		        }
 		}
 	}
