@@ -15,7 +15,7 @@ pipeline{
 		}
 		stage ("deploy"){
 			steps {
-		sh label: '', script: 'docker cp ./index.html lmno234lol:/app/index.php'
+		sh label: '', script: 'docker cp ./index.html 34d0a086c1fb:/app/index.php'
 }
 }
 }
