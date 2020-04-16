@@ -9,13 +9,13 @@ pipeline{
 		
 	        	post{
 	          	  success{
-		    		archiveArtifacts 'index.html'
+		    		archiveArtifacts 'index.php'
 	          	}
 	        	}
 		}
 		stage ("deploy"){
 			steps {
-		sh label: '', script: 'docker cp ./index.html 34d0a086c1fb:/app/index.php'
+		sh label: '', script: 'docker cp ./index.php 34d0a086c1fb:/app/index.php'
 }
 }
 }
